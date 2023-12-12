@@ -12,6 +12,12 @@ import NotFound from './components/NotFound';
 import StateManagement from './components/StateManagement';
 import TodoApp from './components/TodoApp';
 import SocialMediaPost from './components/SocialMediaPost';
+import ChatPage from './components/ChatPage';
+import Listpost from './components/Listpost';
+import {Toaster} from 'react-hot-toast';
+import CreatePost from './components/CreatePost';
+import{SnackbarProvider} from 'notistack';
+import ManageUser from './components/Manageuser';
 // import StateManagement from './components/StateManagement';
 
 const App = () => {
@@ -23,7 +29,8 @@ const App = () => {
       {/* <Home></Home> */}
       {/* <Login/> */}
       {/* <Signup/> */}
-  
+      <SnackbarProvider anchorOrigin={{horizontal:'right',vertical:'top'}}maxSnack={3}>
+      <Toaster position='top-center'/>
       <BrowserRouter>
          <Navbar/>
          {/* <Link to='/'>Home Page</Link>
@@ -41,9 +48,15 @@ const App = () => {
             {/* <Route path='/state' element={<StateManagement/>}/> */}
             <Route path='/todo' element={<TodoApp/>}/>
             <Route path='/post' element={<SocialMediaPost/>}/>
+            <Route path='/chat' element={<ChatPage/>}/>
+            <Route path='/listpost' element={<Listpost/>}/>
+            <Route path='/createpost' element={<CreatePost/>}/>
+            <Route path='/manageuser' element={<ManageUser/>}/>
             <Route path='*' element={<NotFound/>}/>
+
            </Routes>
       </BrowserRouter>
+      </SnackbarProvider>
     </div>
     
   )

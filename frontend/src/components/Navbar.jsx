@@ -67,6 +67,26 @@ const Navbar = () => {
             Social Media Post
           </NavLink>
         </li>
+        <li className="nav-item">
+          <NavLink className="nav-link"to='/chat'>
+            Chat Page
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link"to='/listpost'>
+            List Post
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link"to='/createpost'>
+            Create Post
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link"to='/manageuser'>
+            Manage User
+          </NavLink>
+        </li>
       </ul>
       <form className="d-flex" role="search">
         <input
